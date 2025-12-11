@@ -1,6 +1,8 @@
 const todoForm = document.getElementById("todoForm");
 const todoList = document.getElementById("todoList");
+const filter = document.getElementById("filter");
 
+// ------------ ADD TODO ------------
 todoForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -30,9 +32,30 @@ todoForm.addEventListener("submit", function (e) {
   dateInput.value = "";
 });
 
-// Delete
+// ------------ DELETE TODO ------------
 todoList.addEventListener("click", function (e) {
   if (e.target.classList.contains("delete-btn")) {
     e.target.parentElement.remove();
   }
+});
+
+// ------------ FILTER TODO ------------
+filter.addEventListener("change", function () {
+  const items = document.querySelectorAll(".todo-item");
+
+  items.forEach((item) => {
+    const checkbox = item.querySelector(".check");
+
+    if (filter.value === "all") {
+      item.style.display = "flex";
+    }
+
+    if (filter.value === "completed") {
+      item.style.display = checkbox.checked ? "flex" : "none";
+    }
+
+    if (filter.value === "uncompleted") {
+      item.style.display = checkbox.checked ? "none" : "flex";
+    }
+  });
 });
