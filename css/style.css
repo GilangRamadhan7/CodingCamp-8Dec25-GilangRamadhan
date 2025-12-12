@@ -187,4 +187,8 @@ body {
   .btn-add {
     width: 100%;
   }
+
+  .todo-list {
+    font-size: 13px;
+  }
 }
