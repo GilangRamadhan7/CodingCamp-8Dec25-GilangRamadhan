@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper {
-  padding: 20px;
+  padding: 1.2rem;
   border-radius: 18px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -53,9 +53,8 @@ body {
 .todo-form input {
   border: none;
   height: 35px;
-  width: 200px;
   border-radius: 6px;
-  padding-left: 10px;
+  padding-left: 0.7rem;
   background-color: rgba(0, 0, 0, 0.1);
   outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -163,4 +162,29 @@ body {
 
 .delete-btn:hover {
   background-color: #e85a4f;
+}
+
+/* breakpoint Hp */
+@media screen and (max-width: 576px) {
+  .wrapper {
+    width: 85%;
+  }
+
+  .todo-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .todo-form input {
+    width: 100%;
+  }
+
+  .todo-form .input-date {
+    width: 100%;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
 }
