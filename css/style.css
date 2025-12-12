@@ -164,7 +164,7 @@ body {
   background-color: #e85a4f;
 }
 
-/* breakpoint Hp */
+/* Responsive: mobile handphone */
 @media screen and (max-width: 576px) {
   .wrapper {
     width: 85%;
